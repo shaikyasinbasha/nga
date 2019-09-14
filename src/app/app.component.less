@@ -1,0 +1,79 @@
+@import '../styles.less';
+
+.app-container{
+  max-width: 1024px;
+  margin: 0px auto;
+  padding: 0px;
+
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  box-shadow: 0 0 5px #888888;
+
+  height: 100vh;
+
+}
+
+header{
+  display: flex;
+  align-items: center;
+  img{
+    width: 100px;
+  }
+  .space{
+    flex: 1;
+  }
+  
+}
+
+nav{  
+  a{
+    padding: 5px 15px;
+    font-family: @fontfamily;
+    color: black;
+    text-decoration: none;
+  }
+  .active{
+    border-bottom: 2px solid red;
+  }
+  .profile{
+    display: none;
+    text-align: center;
+    margin: 10px;
+    i{
+      color: white;
+    }
+  }
+}
+
+.itemmenu{
+  display: none;
+  margin-right: 10px;
+}
+.headerdivder{
+  width: 99.9%;
+  border: 1px solid #f5f5f5;
+}
+@media (max-width: 576px) {
+  .itemmenu{
+    display: block;
+  }
+  nav{
+    position: absolute;
+    right: 0;
+    top:0;
+    padding-top: 10px;
+    background-color: black;
+    height: 100%;
+    width: 50%;
+    display: none;
+    a{
+      display: block;
+      color: white;
+      padding: 10px;
+      border-bottom: 1px solid #3e3e3e;
+    }
+    .profile{
+      display: block;
+    }
+  }
+}

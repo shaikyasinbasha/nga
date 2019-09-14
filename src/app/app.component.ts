@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'nga';
+  @ViewChild("navs",{static:false}) navsview: ElementRef;
+  @ViewChild("menuicon",{static:false}) menuicon: ElementRef;
+  onNavHandleEvent(){
+    const menuDisp = this.menuicon.nativeElement.style.display;
+    const navDisp = this.navsview.nativeElement.style.display;
+    if(navDisp === 'block'){
+      this.navsview.nativeElement.style.display = 'none';
+    }
+  }
+  handleMenuClick(){
+    let navDisplay = this.navsview.nativeElement.style.display
+    navDisplay = navDisplay == 'block' ? 'none' : 'block';
+    this.navsview.nativeElement.style.display = navDisplay;
+  }
 }

@@ -1,0 +1,12 @@
+
+<div class="test-section">
+    <input type="text" OnlyNumberAndHash="true" 
+        [(ngModel)]="data" 
+        (ngModelChange)="onTextHandleChnage()"
+        (focus)="onTextFocus()"
+        (focusout)="onTextFocus()"
+    />
+    <input [(ngModel)]="displayValues" />
+    <key-board></key-board>    
+</div>
+
