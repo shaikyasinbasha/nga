@@ -1,3 +1,5 @@
+/* tslint:disable */
+
 import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 
 @Directive({
@@ -33,3 +35,5 @@ export class NumberHashDirective {
       }
   }
 }
+
+/* tslint:enable */

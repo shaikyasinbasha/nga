@@ -1,8 +1,13 @@
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, async, ComponentFixture } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { By } from "@angular/platform-browser";
 
 describe('AppComponent', () => {
+
+  let component: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
@@ -11,25 +16,33 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
-    }).compileComponents();
+    }).compileComponents()
   }));
 
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
+    expect(component).toBeTruthy();
   });
 
-  it(`should have as title 'nga'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('nga');
-  });
+  /* it('should onNavHandleEvent', async(() => {
+    spyOn(component, 'onNavHandleEvent');
+  
+    let navs = fixture.debugElement.nativeElement.querySelector('nav');
+    navs.click();
+  
+    fixture.whenStable().then(() => {
+      expect(component.onNavHandleEvent).toHaveBeenCalled();
+    });
+  }));
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('nga app is running!');
-  });
+  it('should handleMenuClick', async(() => {
+    spyOn(component, 'handleMenuClick');
+  
+    let items = fixture.debugElement.nativeElement.querySelector('.itemmenu');
+    items.click();
+  
+    fixture.whenStable().then(() => {
+      expect(component.handleMenuClick).toHaveBeenCalled();
+    });
+  })); */
+  
 });

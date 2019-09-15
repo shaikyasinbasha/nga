@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-info',
-  templateUrl: 'info.html',
-  styleUrls: ['./info.less']
+  templateUrl: 'app.info.component.html',
+  styleUrls: ['./app.info.component.less']
 })
 
 export class AppInfoComponent {}
