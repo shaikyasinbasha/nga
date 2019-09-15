@@ -1,17 +1,17 @@
 import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 
 @Directive({
-  selector: '[OnlyNumberAndHash]'
+  selector: '[AppOnlyNumberAndHash]'
 })
-export class OnlyNumberAndHash {
+export class NumberHashDirective {
 
   constructor(private el: ElementRef) { }
 
-  @Input() OnlyNumberAndHash: boolean;
+  @Input() AppOnlyNumberAndHash: boolean;
 
   @HostListener('keydown', ['$event']) onKeyDown(event) {
-    let e = <KeyboardEvent> event;
-    if (this.OnlyNumberAndHash) {
+    const e = event as KeyboardEvent;
+    if (this.AppOnlyNumberAndHash) {
       if ([46, 8, 9, 27, 13, 110, 190, 51].indexOf(e.keyCode) !== -1 ||
         // Allow: Ctrl+A
         (e.keyCode === 65 && (e.ctrlKey || e.metaKey)) ||
@@ -27,7 +27,7 @@ export class OnlyNumberAndHash {
           return;
         }
         // Ensure that it is a number and stop the keypress
-        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+      if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
             e.preventDefault();
         }
       }

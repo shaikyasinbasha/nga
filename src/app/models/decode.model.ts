@@ -1,3 +1,3 @@
 export interface IEncodeData {
-    dispValue: string
+    dispValue: string;
 }

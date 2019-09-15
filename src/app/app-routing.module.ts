@@ -5,9 +5,9 @@ import { TestLayoutComponent } from './components/test/testconsole.component';
 
 
 const routes: Routes = [{
-  path:'',
+  path: '',
   component: AppInfoComponent
-},{
+}, {
   path: 'test',
   component: TestLayoutComponent
 }];

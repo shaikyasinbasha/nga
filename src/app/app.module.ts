@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppInfoComponent } from './components/info/app.info.component';
 import { TestLayoutComponent } from './components/test/testconsole.component';
-import { OnlyNumberAndHash } from './directives/OnlyNumberAndHash';
+import { NumberHashDirective } from './directives/numberhash.directive';
 import { KeyboardComponent } from './components/keyboard/keyboard.component';
 import { StoreModule } from '@ngrx/store';
 import { reducer } from './reducers/encode.reducer';
@@ -16,7 +16,7 @@ import { reducer } from './reducers/encode.reducer';
     AppComponent,
     AppInfoComponent,
     TestLayoutComponent,
-    OnlyNumberAndHash,
+    NumberHashDirective,
     KeyboardComponent
   ],
   imports: [

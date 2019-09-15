@@ -1,12 +1,10 @@
 
 <div class="test-section">
-    <input type="text" OnlyNumberAndHash="true" 
+    <input type="text" AppOnlyNumberAndHash="true" 
         [(ngModel)]="data" 
         (ngModelChange)="onTextHandleChnage()"
-        (focus)="onTextFocus()"
-        (focusout)="onTextFocus()"
     />
     <input [(ngModel)]="displayValues" />
-    <key-board></key-board>    
+    <app-key-board></app-key-board>    
 </div>
 

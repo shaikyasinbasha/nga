@@ -1,17 +1,17 @@
-import { Action } from '@ngrx/store'
-import * as EncodeActions from './../actions/encode.actions'
+import { Action } from '@ngrx/store';
+import * as EncodeActions from './../actions/encode.actions';
 import { IEncodeData } from '../models/decode.model';
 
 const initialState: IEncodeData = {
     dispValue: ''
-}
+};
 
 export function reducer(
     state: IEncodeData = initialState,
     action: EncodeActions.Actions
 ) {
 
-    switch(action.type) {
+    switch (action.type) {
         case EncodeActions.ADD_CHARECTER:
             return {
                 ...state,
